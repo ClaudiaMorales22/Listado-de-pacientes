@@ -1,8 +1,8 @@
+
 import Paciente from "./paciente"
 
 function ListadoPacientes({pacientes, setPaciente}) {
 
-  console.log()
 
   return (
     <div className="md:w-1/2 lg:w-3/5">
