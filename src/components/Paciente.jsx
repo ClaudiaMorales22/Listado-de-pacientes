@@ -1,4 +1,20 @@
-const Paciente = ({ pacientes, setPaciente }) => {
+const Paciente = ({ pacientes, setPaciente, eliminarPaciente }) => {
+    const { nombre, nombrePropietario, email, fecha, sintomas, id } = pacientes
+
+    const handleEliminarPaciente = () => {
+        const respuesta = confirm('Deseas eliminar el paciente?');
+        if(respuesta){
+            eliminarPaciente(id)
+        }
+    }
+
+    return (
+        <div className="mb-5 bg-white shadow-md px-5 py-10 rounded-lg">
+            <p className="font-bold mb-3 text-gray-700 uppercase"> Nombre: {""}
+                <span className="font-normal normal-case">{nombre}</span>
+            </p>
+            <p className="font-bold mb-3 text-gray-700 uppercase"> Nombre del propietario: {""}
+                <span className="font-normal normal-case">{nombrePropietario}</span>
             </p>
             <p className="font-bold mb-3 text-gray-700 uppercase"> Email: {""}
                 <span className="font-normal normal-case">{email}</span>
