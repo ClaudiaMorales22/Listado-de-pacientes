@@ -60,7 +60,7 @@ function Formulario({ pacientes, setPacientes, paciente, setPaciente }) {
           setPacientes([...pacientes, objetoPaciente])
         }
         
-       
+        
 
         //Reiniciar el formulario
         setNombre('');
